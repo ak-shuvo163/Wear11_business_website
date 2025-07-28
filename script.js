@@ -477,19 +477,19 @@ if (typeof AOS !== "undefined") {
         {
           name: "Football Jersey Classic",
           price: 590,
-          image: "images/37_JERSEY FUTSAL DENIM FULL PRINT.jpeg",
+          image: "images/37_JERSEY_FUTSAL_DENIM_FULL_PRINT.jpeg",
         },
       ],
       cricket: [
         {
           name: "Cricket Jersey",
           price: 650,
-          image: "images/15_download (4).jpeg",
+          image: "images/15_download__4_.jpeg",
         },
         {
           name: "Cricket Jersey Premier",
           price: 580,
-          image: "images/18_download (7).jpeg",
+          image: "images/18_download__7_.jpeg",
         },
         {
           name: "Cricket Jersey Team Edition",
@@ -506,19 +506,19 @@ if (typeof AOS !== "undefined") {
         {
           name: "Basketball Jersey Elite",
           price: 680,
-          image: "images/34_free background vector for jersey team.jpeg",
+          image: "images/44_konsep_Jersey_depan.jpeg",
         },
         {
           name: "Basketball Jersey",
           price: 640,
-          image: "images/55_sublimation jersey degsin (1).jpeg",
+          image: "images/55_sublimation_jersey_degsin__1_.jpeg",
         },
       ],
       volleyball: [
         {
           name: "Volleyball Jersey Pro",
           price: 560,
-          image: "images/20_download (10).jpeg",
+          image: "images/20_download__10_.jpeg",
         },
         {
           name: "Volleyball Jersey Elite",
