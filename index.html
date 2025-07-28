@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jersey Design & Order</title>
+  <!-- SEO Meta Tags -->
+  <meta name="title" content="Jersey Design & Order - JerseyMaker">
+  <meta name="description" content="Design and order premium custom jerseys for your team or event. Fast delivery, creative design, and affordable price in Bangladesh.">
+  <meta name="keywords" content="custom jersey, jersey maker, Bangladesh, sportswear, order, trujers, home">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="JerseyMaker Team">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/index.html">
+  <meta property="og:title" content="Jersey Design & Order - JerseyMaker">
+  <meta property="og:description" content="Design and order premium custom jerseys for your team or event. Fast delivery, creative design, and affordable price in Bangladesh.">
+  <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yourdomain.com/index.html">
+  <meta property="twitter:title" content="Jersey Design & Order - JerseyMaker">
+  <meta property="twitter:description" content="Design and order premium custom jerseys for your team or event. Fast delivery, creative design, and affordable price in Bangladesh.">
+  <meta property="twitter:image" content="https://yourdomain.com/images/og-image.jpg">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&family=Poppins:wght@400;700&family=Orbitron:wght@500&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="images/download__24_-removebg-preview.png" alt="Logo" style="height:45px;">
+        <span style="font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:2px;">Wear11</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavOffcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="mainNavOffcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="products.html"><i class="fa-solid fa-shirt"></i> Products</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="order.html"><i class="fa-solid fa-cart-shopping"></i>
+                Order</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i>
+                Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-solid fa-sign-in-alt"></i> Login</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="user.html"><i class="fa-solid fa-user-plus"></i> Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sports Category Nav -->
+  <div class="sports-nav d-flex justify-content-center align-items-center gap-4 py-3">
+    <button class="sports-btn active" data-sport="football"><i class="fa-solid fa-futbol"></i> Football</button>
+    <button class="sports-btn" data-sport="cricket"><i class="fa-solid fa-cricket-bat-ball"></i> Cricket</button>
+    <button class="sports-btn" data-sport="basketball"><i class="fa-solid fa-basketball"></i> Basketball</button>
+    <button class="sports-btn" data-sport="volleyball"><i class="fa-solid fa-volleyball"></i> Volleyball</button>
+    <button class="sports-btn" data-sport="custom"><i class="fa-solid fa-pen-nib"></i> Custom Design</button>
+    <!-- আরও স্পোর্টস চাইলে যোগ করুন -->
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div id="dynamic-hero" class="dynamic-hero d-flex align-items-center"
+      style="background-image: url('images/200__Create_a_wide_panoramic_digital_painting_showing_football_player_7061bda4-48b0-404b-b840-1940f53a7c87.png');">
+      <div class="container">
+        <div class="hero-content text-white hero-text-shadow">
+          <h1 class="display-3 fw-bold mb-3 hero-title">DESIGN YOUR OWN<br>CUSTOM FOOTBALL JERSEYS</h1>
+          <p class="lead mb-4 hero-desc">Create your personalised jersey with our 3D football kit designer.</p>
+          <a href="products.html" class="btn btn-light btn-lg px-4 me-2">Product overview</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Bar -->
+  <div class="feature-bar d-flex justify-content-center align-items-center gap-5 py-3 bg-light text-dark">
+    <div><i class="fa-solid fa-shirt"></i> All printing costs included</div>
+    <div><i class="fa-solid fa-truck-fast"></i> Fastest production and delivery times on the market</div>
+    <div><i class="fa-solid fa-star"></i> High quality materials 100% made in Bangladesh</div>
+  </div>
+
+  <!-- Scrolling Jerseys -->
+  <section class="scrolling-jerseys py-3">
+    <div class="container">
+      <div class="scrolling-jerseys-nav d-flex align-items-center position-relative">
+        <div class="scrolling-wrapper-new">
+          <div class="scrolling-content">
+            <img src="images/47_Rangers 24_25 Castore Third Kit.jpeg" alt="Jersey" height="100">
+            <img src="images/64_SUBLIMISSON JERSEY.jpeg" alt="Jersey" height="100">
+            <img src="images/48_Soccer Jersey Mockup - adhink ramadlan.jpeg" alt="Jersey" height="100">
+            <img src="images/55_sublimation jersey degsin (1).jpeg" alt="Jersey" height="100">
+            <img src="images/56_sublimation jersey degsin (2).jpeg" alt="Jersey" height="100">
+            <img src="images/15_download (4).jpeg" alt="Jersey" height="100">
+            <img src="images/58_sublimation jersey degsin order now 01872533898.jpeg" alt="Jersey" height="100">
+            <img src="images/59_sublimation jersey degsin.jpeg" alt="Jersey" height="100">
+            <img src="images/61_sublimation jersey design order now  01872533898.jpeg" alt="Jersey" height="100">
+            <img src="images/62_Sublimation Jersey Design.jpeg" alt="Jersey" height="100">
+            <!-- Duplicate images for seamless loop -->
+            <img src="images/white_.jpeg" alt="Jersey" height="100">
+            <img src="images/blue_standard.jpeg" alt="Jersey" height="100">
+            <img src="images/48_Soccer Jersey Mockup - adhink ramadlan.jpeg" alt="Jersey" height="100">
+            <img src="images/55_sublimation jersey degsin (1).jpeg" alt="Jersey" height="100">
+            <img src="images/56_sublimation jersey degsin (2).jpeg" alt="Jersey" height="100">
+            <img src="images/22_download (12).jpeg" alt="Jersey" height="100">
+            <img src="images/58_sublimation jersey degsin order now 01872533898.jpeg" alt="Jersey" height="100">
+            <img src="images/59_sublimation jersey degsin.jpeg" alt="Jersey" height="100">
+            <img src="images/61_sublimation jersey design order now  01872533898.jpeg" alt="Jersey" height="100">
+            <img src="images/62_Sublimation Jersey Design.jpeg" alt="Jersey" height="100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  About Trujers -->
+  <section class="about py-5 animate__animated animate__fadeInUp">
+    <div class="container">
+      <div class="row align-items-center g-4 flex-lg-row flex-column-reverse">
+        <div class="col-lg-5 text-center text-lg-start mb-4 mb-lg-0">
+          <div class="about-logo-box d-inline-block p-4 bg-white rounded-4 shadow-sm mb-3">
+            <i class="fa-solid fa-shirt fa-4x text-primary mb-2"></i>
+          </div>
+          <h2 class="fw-bold mb-3" style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color: #3730a3;">
+            About <span class="text-primary">Wear11</span></h2>
+          <p class="lead" style="font-family: 'Poppins', sans-serif; color: #444;">Premium custom jerseys for teams &
+            fans. Designed for comfort, style, and performance.</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="bg-white rounded-4 shadow-sm p-4 h-100 d-flex flex-column justify-content-center">
+            <h3 class="fw-semibold mb-3" style="font-family: 'Poppins', sans-serif; color: #1e293b;">
+              <i class="fa-solid fa-star text-warning me-2"></i> Why Choose Wear11?
+            </h3>
+            <ul class="list-unstyled mb-4 about-feature-list">
+              <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> 100% premium quality fabrics
+                (170-180 GSM)</li>
+              <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Modern, stylish & durable
+                designs</li>
+              <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Fastest production & delivery
+                in Bangladesh</li>
+              <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Customization for any sport or
+                team</li>
+              <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Friendly support & easy
+                ordering</li>
+            </ul>
+            <div class="row g-3 text-center">
+              <div class="col-6 col-md-4">
+                <div class="p-3 bg-light rounded-3 shadow-sm h-100">
+                  <i class="fa-solid fa-users fa-2x text-primary mb-2"></i>
+                  <div class="fw-bold">5000+</div>
+                  <div class="small text-muted">Happy Teams</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="p-3 bg-light rounded-3 shadow-sm h-100">
+                  <i class="fa-solid fa-shirt fa-2x text-success mb-2"></i>
+                  <div class="fw-bold">20,000+</div>
+                  <div class="small text-muted">Jerseys Delivered</div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="p-3 bg-light rounded-3 shadow-sm h-100">
+                  <i class="fa-solid fa-award fa-2x text-warning mb-2"></i>
+                  <div class="fw-bold">10+ Years</div>
+                  <div class="small text-muted">Experience</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Premium Fabrics Section -->
+            <div class="mt-4">
+              <h5 class="fw-semibold mb-3 text-center" style="font-family: 'Poppins', sans-serif; color: #1e293b;">
+                <i class="fa-solid fa-fabric text-info me-2"></i> Our Premium Fabrics
+              </h5>
+              <div class="row g-3">
+                <div class="col-6 col-md-3">
+                  <div class="fabric-card text-center p-2 bg-light rounded-3 shadow-sm" data-bs-toggle="modal"
+                    data-bs-target="#fabricModal" data-fabric="dry-fit">
+                    <img src="images/Box_Mash_WhatsApp_Image_2025-07-09_at_20.25.22_11c4ac14.jpg" alt="Premium Fabric 1"
+                      class="img-fluid rounded mb-2" style="max-height: 80px; object-fit: cover;">
+                    <div class="small fw-semibold">Dry-FIT Emboss</div>
+                    <div class="small text-muted">170-180 GSM</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="fabric-card text-center p-2 bg-light rounded-3 shadow-sm" data-bs-toggle="modal"
+                    data-bs-target="#fabricModal" data-fabric="polyester">
+                    <img src="images/Leaf_Jackard_WhatsApp_Image_2025-07-09_at_20.25.25_5095890c.jpg"
+                      alt="Premium Fabric 2" class="img-fluid rounded mb-2"
+                      style="max-height: 80px; object-fit: cover;">
+                    <div class="small fw-semibold">Polyester Blend</div>
+                    <div class="small text-muted">High Quality</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="fabric-card text-center p-2 bg-light rounded-3 shadow-sm" data-bs-toggle="modal"
+                    data-bs-target="#fabricModal" data-fabric="mesh">
+                    <img src="images/Mash_Pinnole_WhatsApp_Image_2025-07-09_at_20.25.25_bccdf41f.jpg"
+                      alt="Premium Fabric 3" class="img-fluid rounded mb-2"
+                      style="max-height: 80px; object-fit: cover;">
+                    <div class="small fw-semibold">Sport Mesh</div>
+                    <div class="small text-muted">Breathable</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="fabric-card text-center p-2 bg-light rounded-3 shadow-sm" data-bs-toggle="modal"
+                    data-bs-target="#fabricModal" data-fabric="plain">
+                    <img src="images/Plain_Polyster_WhatsApp_Image_2025-07-09_at_20.25.24_a4c1154e.jpg"
+                      alt="Premium Fabric 4" class="img-fluid rounded mb-2"
+                      style="max-height: 80px; object-fit: cover;">
+                    <div class="small fw-semibold">Plain Polyester</div>
+                    <div class="small text-muted">Durable</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Featured-Products-->
+  <section class="featured-products animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="fw-bold mb-4" style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color: #3730a3;">
+        Featured Products</h2>
+      <div class="product-list row justify-content-center g-4">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/24_download (14).jpeg" class="img-fluid" alt="Classic Red Jersey">
+              <div class="product-overlay">
+                <div class="overlay-buttons">
+                  <button class="btn btn-light btn-sm me-2" onclick="openOrderModal('Classic Red Jersey', 450)"><i
+                      class="fa-solid fa-cart-plus"></i> Order</button>
+                  <button class="btn btn-outline-light btn-sm"
+                    onclick="openQuickView('Classic Red Jersey', 'images/24_download (14).jpeg', 'Premium quality classic red jersey.')"><i
+                      class="fa-solid fa-eye"></i> View</button>
+                </div>
+              </div>
+              <div class="product-badge">Best Seller</div>
+            </div>
+            <div class="product-info">
+              <h5 class="product-title">Classic Red Jersey</h5>
+              <div class="product-price">
+                <span class="current-price">৳ 420</span>
+                <span class="price-unit">per piece</span>
+              </div>
+              <div class="product-meta">
+                <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/23_download (13).jpeg" class="img-fluid"
+                alt="Blue Stripes Jersey">
+              <div class="product-overlay">
+                <div class="overlay-buttons">
+                  <button class="btn btn-light btn-sm me-2" onclick="openOrderModal('Blue Stripes Jersey', 480)"><i
+                      class="fa-solid fa-cart-plus"></i> Order</button>
+                  <button class="btn btn-outline-light btn-sm"
+                  onclick="openQuickView('Blue Stripes Jersey', 'images/23_download (13).jpeg', 'Premium quality classic red jersey.')"><i
+                      class="fa-solid fa-eye"></i> View</button>
+                </div>
+              </div>
+              <div class="product-badge new">New</div>
+            </div>
+            <div class="product-info">
+              <h5 class="product-title">Blue Stripes Jersey</h5>
+              <div class="product-price">
+                <span class="current-price">৳ 425</span>
+                <span class="price-unit">per piece</span>
+              </div>
+              <div class="product-meta">
+                <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/48_Soccer Jersey Mockup - adhink ramadlan.jpeg" class="img-fluid"
+                alt="Black & Yellow Jersey">
+              <div class="product-overlay">
+                <div class="overlay-buttons">
+                  <button class="btn btn-light btn-sm me-2" onclick="openOrderModal('Black & Yellow Jersey', 500)"><i
+                      class="fa-solid fa-cart-plus"></i> Order</button>
+                  <button class="btn btn-outline-light btn-sm"
+                    onclick="openQuickView('Black & Yellow Jersey', 'images/48_Soccer Jersey Mockup - adhink ramadlan.jpeg', 'Premium black & yellow jersey for champions.')"><i
+                      class="fa-solid fa-eye"></i> View</button>
+                </div>
+              </div>
+              <div class="product-badge premium">Premium</div>
+            </div>
+            <div class="product-info">
+              <h5 class="product-title">Black & Yellow Jersey</h5>
+              <div class="product-price">
+                <span class="current-price">৳ 424</span>
+                <span class="price-unit">per piece</span>
+              </div>
+              <div class="product-meta">
+                <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="images/40_Jersey futsal printing jersey bola baju bola jersey volly printing gartis nama nomor punggung.jpeg"
+                class="img-fluid" alt="White Classic Jersey">
+              <div class="product-overlay">
+                <div class="overlay-buttons">
+                  <button class="btn btn-light btn-sm me-2" onclick="openOrderModal('White Classic Jersey', 470)"><i
+                      class="fa-solid fa-cart-plus"></i> Order</button>
+                  <button class="btn btn-outline-light btn-sm"
+                    onclick="openQuickView('White Classic Jersey', 'images/40_Jersey futsal printing jersey bola baju bola jersey volly printing gartis nama nomor punggung.jpeg', 'Classic white jersey for all sports.')"><i
+                      class="fa-solid fa-eye"></i> View</button>
+                </div>
+              </div>
+              <div class="product-badge hot">Hot</div>
+            </div>
+            <div class="product-info">
+              <h5 class="product-title">White Classic Jersey</h5>
+              <div class="product-price">
+                <span class="current-price">৳ 426</span>
+                <span class="price-unit">per piece</span>
+              </div>
+              <div class="product-meta">
+                <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 🏷️ Offers -->
+  <section class="offers animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="fw-bold mb-4" style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; color: #3730a3;">Special
+        Offers</h2>
+      <div class="offer-list row justify-content-center g-4">
+        <div class="offer-card col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+          <img src="images/1_curtom_design.jpg" alt="Team Bundle Offer">
+          <h4><i class="fa-solid fa-people-group text-primary me-2"></i>Team Bundle - 10% Off</h4>
+          <p>Order 20+ jerseys and get 10% discount on your total order.</p>
+          <small><i class="fa-regular fa-calendar-days me-1"></i> Valid until: July 31, 2025</small>
+          <button class="btn btn-info mt-auto"><i class="fa-solid fa-cart-plus"></i> Order Now</button>
+        </div>
+        <div class="offer-card col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+          <img src="images/41_Jersey Poster_.jpeg" alt="Free Shipping">
+          <h4><i class="fa-solid fa-truck-fast text-success me-2"></i>Free Shipping</h4>
+          <p>Enjoy free delivery on orders above 60 jerseys (within Bangladesh).</p>
+          <small><i class="fa-regular fa-clock me-1"></i> Limited time offer</small>
+          <button class="btn btn-success mt-auto"><i class="fa-solid fa-bag-shopping"></i> Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🖼️ Gallery -->
+  <section class="gallery">
+    <h2>Our Jersey Gallery</h2>
+
+    <!-- Filter Buttons -->
+    <!-- <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="football">Football</button>
+      <button class="filter-btn" data-filter="cricket">Cricket</button>
+      <button class="filter-btn" data-filter="basketball">Basketball</button>
+      <button class="filter-btn" data-filter="volleyball">Volleyball</button>
+      <button class="filter-btn" data-filter="custom">Custom</button>
+    </div> -->
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+
+      <div class="gallery-item football">
+        <img src="images/23_download (13).jpeg" alt="Football Jersey">
+      </div>
+
+      <div class="gallery-item cricket">
+        <img src="images/34_free background vector for jersey team.jpeg" alt="Cricket Jersey">
+      </div>
+
+      <div class="gallery-item basketball">
+        <img src="images/36_JERSEY DESIGN FULL PRINTING ACARA DAN OLAHRAGA.jpeg" alt="Basketball Jersey">
+      </div>
+
+      <div class="gallery-item volleyball">
+        <img src="images/69_volleyball.jpg" alt="Volleyball Jersey">
+      </div>
+
+      <div class="gallery-item custom">
+        <img src="images/49_sport jersey design (1).jpeg" alt="Custom Jersey">
+      </div>
+
+      <div class="gallery-item football">
+        <img
+          src="images/24_download (14).jpeg"
+          alt="Football Jersey">
+      </div>
+
+      <div class="gallery-item cricket">
+        <img
+          src="images/26_download (16).jpeg"
+          alt="Cricket Jersey">
+      </div>
+
+      <div class="gallery-item basketball">
+        <img src="images/30_download (20).jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/37_JERSEY FUTSAL DENIM FULL PRINT.jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/54_SPR Runner Jersey Running Series A.jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/13_download (2).jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/14_download (3).jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/15_download (4).jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/32_download.jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/18_download (7).jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/20_download (10).jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/17_download (6).jpeg" alt="Basketball Jersey">
+      </div>
+      <div class="gallery-item basketball">
+        <img src="images/22_download (12).jpeg" alt="Basketball Jersey">
+      </div>
+      <a href="products.html" class="gallery-view-more">View More</a>
+    </div>
+  </section>
+
+  <!-- ✍️ Testimonials -->
+  <section class="testimonials py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">What Our Clients Say</h2>
+
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="card shadow-sm mx-auto text-center p-4  flex-column align-items-center"
+              style="max-width: 600px;" data-aos="fade-up">
+              <img src="images/rs_WhatsApp_Image_2025-07-11_at_19.00.35_347d3b50.jpg"
+                class="rounded-circle border border-dark mb-3" width="80" height="80" alt="Client">
+              <div class="mb-2 text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="fst-italic">"Wear11 jerseys are amazing! The quality is top-notch and delivery was on time. Our
+                whole team loved it!"</p>
+              <h5 class="mb-0">Rs Rasel</h5>
+              <small class="text-muted">Captain, Konabari Cricket Team,Gazipur</small>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card shadow-sm mx-auto text-center p-4  flex-column align-items-center"
+              style="max-width: 600px;" data-aos="fade-up">
+              <img src="images/ms_jeny.jpg"
+                class="rounded-circle border border-dark mb-3" width="80" height="80" alt="Client">
+              <div class="mb-2 text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="fst-italic">"Great custom design options and the fabric is super comfortable. Highly recommend
+                Wear11!"</p>
+              <h5 class="mb-0">Ms Jenny</h5>
+              <small class="text-muted">Manager, City Volleyball Club</small>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card shadow-sm mx-auto text-center p-4  flex-column align-items-center"
+              style="max-width: 600px;" data-aos="fade-up">
+              <img src="images/client3.jpg" class="rounded-circle border border-dark mb-3" width="80" height="80"
+                alt="Client">
+              <div class="mb-2 text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="fst-italic">"We ordered 50 jerseys for our tournament and everyone was impressed by the colors
+                and fitting."</p>
+              <h5 class="mb-0">Jamal Hossain</h5>
+              <small class="text-muted">Coach, Bangladesh Football Club</small>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Contact CTA-->
+  <section class="contact-cta py-5 text-white text-center">
+    <div class="container" data-aos="zoom-in">
+      <div class="contact-cta-box mx-auto p-4 p-md-5 rounded-4 shadow-lg">
+        <h2 class="mb-3 fw-bold d-flex justify-content-center align-items-center gap-2"
+          style="font-family:'Orbitron',sans-serif;letter-spacing:1px;">
+          <i class="fa-brands fa-whatsapp text-success"></i>
+          Have a question or want to place an order?
+        </h2>
+        <p class="mb-4 lead" style="font-family:'Poppins',sans-serif;">Contact us directly on <span
+            class="fw-semibold text-success">WhatsApp</span>. We’re here to help you anytime!</p>
+        <a href="" target="_blank"
+          class="btn btn-success btn-lg px-5 py-3 shadow whatsapp-cta-btn animate__animated animate__pulse animate__infinite">
+          <i class="fa-brands fa-whatsapp me-2"></i> Chat on WhatsApp
+        </a>
+        <div class="mt-3 small text-white-50">Fast response • Friendly support • 100% Satisfaction</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-white mt-auto" data-aos="fade-up">
+    <div class="container py-5">
+      <div class="row justify-content-between">
+
+        <!-- Company Info -->
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold"><i class="fa-solid fa-shirt text-warning me-2"></i>Wear11</h5>
+          <p class="small">
+            Premium quality custom jerseys for athletes and fans. Designed with care and precision.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-md-2 mb-4">
+          <h6 class="fw-semibold mb-3">Quick Links</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="cart.html" class="footer-link">Cart</a></li>
+            <li><a href="order.html" class="footer-link">Order</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="login.html" class="footer-link">Login</a></li>
+            <li><a href="user.html" class="footer-link">Register</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-md-3 mb-4">
+          <h6 class="fw-semibold mb-3">Subscribe</h6>
+          <form>
+            <div class="input-group">
+              <input type="email" class="form-control form-control-sm" placeholder="Your email" required>
+              <button class="btn btn-warning btn-sm" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <small class="d-block mt-2">No spam, we promise.</small>
+        </div>
+
+        <!-- Our Office -->
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-semibold mb-3">Our Office</h6>
+          <div class="office-placeholder bg-light rounded shadow mb-2 d-flex align-items-center justify-content-center"
+              style="height: 120px; max-width: 100%; overflow: hidden;">
+            <iframe
+              src="https://www.google.com/maps?,+Dhaka,+Bangladesh&output=embed"
+              width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <address class="small">
+            <strong>Wear11</strong><br>
+             Dhaka,Bangladesh<br>
+            <strong>Phone:</strong> +880 1154698722<br>
+            <strong>Email:</strong> wear11@gmail.com
+          </address>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <hr class="bg-white">
+      <div class="text-center small">
+        &copy; 2025 Wear11 | All rights reserved.<br>
+        Designed with <i class="fa-solid fa-heart text-danger"></i> by wear11 Team
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fabric Modal -->
+  <div class="modal fade" id="fabricModal" tabindex="-1" aria-labelledby="fabricModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="fabricModalLabel">
+            <i class="fa-solid fa-fabric text-info me-2"></i>Premium Fabric Details
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img id="fabricModalImage" src="" alt="Fabric" class="img-fluid rounded shadow-sm mb-3">
+            </div>
+            <div class="col-md-6">
+              <h4 id="fabricModalTitle" class="fw-bold mb-3"></h4>
+              <div id="fabricModalDescription" class="mb-3"></div>
+              <div class="fabric-specs">
+                <h6 class="fw-semibold mb-2"><i class="fa-solid fa-list-check text-primary me-2"></i>Specifications:
+                </h6>
+                <ul id="fabricModalSpecs" class="list-unstyled">
+                </ul>
+              </div>
+              <div class="fabric-features mt-3">
+                <h6 class="fw-semibold mb-2"><i class="fa-solid fa-star text-warning me-2"></i>Key Features:</h6>
+                <ul id="fabricModalFeatures" class="list-unstyled">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="https://wa.me/880?text=Hi! I'm interested in your premium fabrics. Can you tell me more about the fabric options?"
+            target="_blank" class="btn btn-success">
+            <i class="fa-brands fa-whatsapp me-2"></i>Ask on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="orderForm">
+          <div class="modal-header">
+            <h5 class="modal-title" id="orderModalLabel"><i class="fa-solid fa-cart-shopping me-2"></i>Place Your Order
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Item Name</label>
+              <input type="text" class="form-control" id="orderItemName" name="item" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Customer Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="orderCustomerName" name="name" placeholder="Your Name"
+                required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="orderPhone" name="phone" placeholder="01XXXXXXXXX" required
+                pattern="01[0-9]{9}">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Address</label>
+              <input type="text" class="form-control" id="orderAddress" name="address"
+                placeholder="Your Address (optional)">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Quantity</label>
+              <div class="input-group">
+                <button type="button" class="btn btn-outline-secondary" id="qtyMinus">-</button>
+                <input type="number" class="form-control text-center" id="orderQty" name="qty" value="10" min="10"
+                  readonly style="max-width:80px;">
+                <button type="button" class="btn btn-outline-secondary" id="qtyPlus">+</button>
+              </div>
+              <div class="form-text text-danger d-none" id="qtyError">Minimum 10 pcs order required.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Total Price</label>
+              <div class="fs-4 fw-bold text-warning" id="orderTotal">$0</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-warning">Confirm Order</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+        <div class="p-4 text-center d-none" id="orderSuccess">
+          <i class="fa-solid fa-circle-check fa-3x text-success mb-3"></i>
+          <h5 class="mb-2">Order Placed Successfully!</h5>
+          <p>Thank you for your order. We will contact you soon.</p>
+          <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- VanillaTilt.js for 3D effect -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

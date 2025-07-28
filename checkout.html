@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - JerseyMaker</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&family=Poppins:wght@400;700&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/download__24_-removebg-preview.png" alt="Logo" style="height:45px;">
+                <span style="font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:2px;">Wear11</span>
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mainNavOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                    class="fa-solid fa-circle-info"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html"><i class="fa-solid fa-shirt"></i>
+                                Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="order.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i
+                                    class="fa-solid fa-envelope"></i> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html"><i
+                                    class="fa-solid fa-sign-in-alt"></i> Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="user.html"><i class="fa-solid fa-user-plus"></i>
+                                Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Hero Section -->
+    <section class="checkout-hero py-4">
+        <div class="container">
+            <div class="checkout-hero-content text-center">
+                <div class="checkout-hero-icon mb-3">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <h1 class="checkout-hero-title mb-2">Secure Checkout</h1>
+                <p class="checkout-hero-subtitle">Complete your order with confidence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Checkout Form -->
+                <div class="col-lg-8 mb-4">
+                    <div class="checkout-form-container">
+                        <div class="checkout-form-header">
+                            <h3 class="checkout-form-title">
+                                <i class="fa-solid fa-user me-2"></i>Customer Information
+                            </h3>
+                        </div>
+
+                        <form class="checkout-form">
+                            <!-- Personal Information -->
+                            <div class="form-section mb-4">
+                                <h5 class="form-section-title mb-3">
+                                    <i class="fa-solid fa-user-circle me-2"></i>Personal Details
+                                </h5>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">First Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Last Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Phone <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" placeholder="01XXXXXXXXX" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shipping Information -->
+                            <div class="form-section mb-4">
+                                <h5 class="form-section-title mb-3">
+                                    <i class="fa-solid fa-truck me-2"></i>Shipping Address
+                                </h5>
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label class="form-label">Full Address <span
+                                                class="text-danger">*</span></label>
+                                        <textarea class="form-control" rows="3"
+                                            placeholder="Enter your complete address" required></textarea>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">City <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Postal Code</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Delivery Instructions</label>
+                                        <textarea class="form-control" rows="2"
+                                            placeholder="Any special delivery instructions (optional)"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Payment Information -->
+                            <div class="form-section mb-4">
+                                <h5 class="form-section-title mb-3">
+                                    <i class="fa-solid fa-credit-card me-2"></i>Payment Method
+                                </h5>
+
+                                <!-- Payment Options -->
+                                <div class="payment-options mb-3">
+                                    <div class="form-check payment-option mb-2">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="cod"
+                                            checked>
+                                        <label class="form-check-label" for="cod">
+                                            <i class="fa-solid fa-money-bill-wave me-2"></i>Cash on Delivery (COD)
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option mb-2">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="bkash">
+                                        <label class="form-check-label" for="bkash">
+                                            <i class="fa-solid fa-mobile-alt me-2"></i>bKash
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option mb-2">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="nagad">
+                                        <label class="form-check-label" for="nagad">
+                                            <i class="fa-solid fa-wallet me-2"></i>Nagad
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option mb-2">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="rocket">
+                                        <label class="form-check-label" for="rocket">
+                                            <i class="fa-solid fa-rocket me-2"></i>Rocket
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Banking Details (shown when selected) -->
+                                <div id="mobileBankingDetails" class="mobile-banking-details d-none">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Mobile Number</label>
+                                            <input type="tel" class="form-control" placeholder="01XXXXXXXXX">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Transaction ID</label>
+                                            <input type="text" class="form-control" placeholder="Enter transaction ID">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Order Notes -->
+                            <div class="form-section mb-4">
+                                <h5 class="form-section-title mb-3">
+                                    <i class="fa-solid fa-sticky-note me-2"></i>Order Notes
+                                </h5>
+                                <textarea class="form-control" rows="3"
+                                    placeholder="Any special instructions for your order (optional)"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="order-summary-container">
+                        <div class="order-summary-header">
+                            <h3 class="order-summary-title">
+                                <i class="fa-solid fa-receipt me-2"></i>Order Summary
+                            </h3>
+                        </div>
+
+                        <div class="order-summary-content">
+                            <!-- Cart Items Summary -->
+                            <div class="cart-items-summary mb-4">
+                                <h6 class="summary-section-title mb-3">Items in Cart</h6>
+                                <div class="cart-item-summary">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div>
+                                            <strong>Football Jersey Classic</strong>
+                                            <br><small class="text-muted">Quantity: 10 pcs</small>
+                                        </div>
+                                        <span class="fw-bold">৳5,500</span>
+                                    </div>
+                                </div>
+                                <div class="cart-item-summary">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div>
+                                            <strong>Cricket Jersey Green</strong>
+                                            <br><small class="text-muted">Quantity: 12 pcs</small>
+                                        </div>
+                                        <span class="fw-bold">৳6,960</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Price Breakdown -->
+                            <div class="price-breakdown mb-4">
+                                <h6 class="summary-section-title mb-3">Price Breakdown</h6>
+                                <div class="summary-row">
+                                    <span>Subtotal</span>
+                                    <span>৳12,460</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Shipping</span>
+                                    <span>৳150</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Tax</span>
+                                    <span>৳0</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <span>Total</span>
+                                    <span>৳12,610</span>
+                                </div>
+                            </div>
+
+                            <!-- Delivery Information -->
+                            <div class="delivery-info mb-4">
+                                <h6 class="summary-section-title mb-3">Delivery Information</h6>
+                                <div class="delivery-option">
+                                    <i class="fa-solid fa-truck me-2"></i>
+                                    <span>Standard Delivery (3-5 days)</span>
+                                </div>
+                                <small class="text-muted">Free shipping on orders above ৳10,000</small>
+                            </div>
+
+                            <!-- Security Badge -->
+                            <div class="security-badge mb-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-shield-alt text-success me-2"></i>
+                                    <span class="small">Secure Checkout with SSL Encryption</span>
+                                </div>
+                            </div>
+
+                            <!-- Place Order Button -->
+                            <div class="place-order-section">
+                                <button class="btn btn-success btn-lg w-100 place-order-btn">
+                                    <i class="fa-solid fa-lock me-2"></i>Place Order Securely
+                                </button>
+                                <p class="text-center small text-muted mt-2">
+                                    By placing your order, you agree to our <a href="#"
+                                        class="text-decoration-none">Terms & Conditions</a>
+                                </p>
+                            </div>
+
+                            <!-- Continue Shopping -->
+                            <div class="continue-shopping mt-3">
+                                <a href="products.html" class="btn btn-outline-primary w-100">
+                                    <i class="fa-solid fa-arrow-left me-2"></i>Continue Shopping
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white mt-auto" data-aos="fade-up">
+        <div class="container py-5">
+          <div class="row justify-content-between">
+    
+            <!-- Company Info -->
+            <div class="col-md-3 mb-4">
+              <h5 class="fw-bold"><i class="fa-solid fa-shirt text-warning me-2"></i>Wear11</h5>
+              <p class="small">
+                Premium quality custom jerseys for athletes and fans. Designed with care and precision.
+              </p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-semibold mb-3">Quick Links</h6>
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="about.html" class="footer-link">About</a></li>
+                <li><a href="products.html" class="footer-link">Products</a></li>
+                <li><a href="cart.html" class="footer-link">Cart</a></li>
+                <li><a href="order.html" class="footer-link">Order</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li>
+                <li><a href="login.html" class="footer-link">Login</a></li>
+                <li><a href="user.html" class="footer-link">Register</a></li>
+              </ul>
+            </div>
+    
+            <!-- Newsletter -->
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-semibold mb-3">Subscribe</h6>
+              <form>
+                <div class="input-group">
+                  <input type="email" class="form-control form-control-sm" placeholder="Your email" required>
+                  <button class="btn btn-warning btn-sm" type="submit">Subscribe</button>
+                </div>
+              </form>
+              <small class="d-block mt-2">No spam, we promise.</small>
+            </div>
+    
+            <!-- Our Office -->
+            <div class="col-md-4 mb-4">
+              <h6 class="fw-semibold mb-3">Our Office</h6>
+              <div class="office-placeholder bg-light rounded shadow mb-2 d-flex align-items-center justify-content-center"
+                  style="height: 120px; max-width: 100%; overflow: hidden;">
+                <iframe
+                  src="https://www.google.com/maps?q=,+Dhaka,+Bangladesh&output=embed"
+                  width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <address class="small">
+                <strong>Wear11</strong><br>
+                 Dhaka,Bangladesh<br>
+                <strong>Phone:</strong> +880 1154698722<br>
+                <strong>Email:</strong> wear11@gmail.com
+              </address>
+            </div>
+          </div>
+    
+          <!-- Footer Bottom -->
+          <hr class="bg-white">
+          <div class="text-center small">
+            &copy; 2025 Wear11 | All rights reserved.<br>
+            Designed with <i class="fa-solid fa-heart text-danger"></i> by wear11 Team
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Checkout Page JavaScript
+        $(document).ready(function () {
+            // Show/hide mobile banking details based on payment method
+            $('input[name="paymentMethod"]').change(function () {
+                const selectedMethod = $(this).attr('id');
+                if (selectedMethod === 'bkash' || selectedMethod === 'nagad' || selectedMethod === 'rocket') {
+                    $('#mobileBankingDetails').removeClass('d-none');
+                } else {
+                    $('#mobileBankingDetails').addClass('d-none');
+                }
+            });
+
+            // Place order button functionality
+            $('.place-order-btn').click(function () {
+                // Validate form
+                const form = $('.checkout-form')[0];
+                if (form.checkValidity()) {
+                    // Show success message
+                    alert('Order placed successfully! We will contact you soon.');
+                    // Redirect to confirmation page or home
+                    window.location.href = 'index.html';
+                } else {
+                    form.reportValidity();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

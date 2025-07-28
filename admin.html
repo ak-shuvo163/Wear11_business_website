@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - JerseyMaker</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&family=Poppins:wght@400;700&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Admin Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/download__24_-removebg-preview.png" alt="wear11 Logo" style="height:45px;">
+                <span style="font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:2px;">Wear11</span>
+                <span class="badge bg-danger ms-2">Admin</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mainNavOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html"><i class="fa-solid fa-shirt"></i>
+                                Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="order.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i
+                                    class="fa-solid fa-envelope"></i> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="admin.html"><i
+                                    class="fa-solid fa-user-shield"></i> Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html"><i
+                                    class="fa-solid fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-dashboard py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <div class="admin-sidebar bg-white rounded-3 shadow-sm p-4">
+                        <div class="admin-profile text-center mb-4">
+                            <div class="admin-avatar mb-3">
+                                <i class="fa-solid fa-user-shield fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="fw-bold mb-1">Admin Panel</h5>
+                            <p class="text-muted small">JerseyMaker Dashboard</p>
+                        </div>
+
+                        <nav class="admin-nav">
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="#dashboard" class="admin-nav-link active" data-section="dashboard">
+                                        <i class="fa-solid fa-tachometer-alt me-2"></i>Dashboard
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#orders" class="admin-nav-link" data-section="orders">
+                                        <i class="fa-solid fa-shopping-cart me-2"></i>Orders
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#products" class="admin-nav-link" data-section="products">
+                                        <i class="fa-solid fa-shirt me-2"></i>Products
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#customers" class="admin-nav-link" data-section="customers">
+                                        <i class="fa-solid fa-users me-2"></i>Customers
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#analytics" class="admin-nav-link" data-section="analytics">
+                                        <i class="fa-solid fa-chart-line me-2"></i>Analytics
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#settings" class="admin-nav-link" data-section="settings">
+                                        <i class="fa-solid fa-cog me-2"></i>Settings
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9 col-md-8">
+                    <!-- Dashboard Section -->
+                    <div id="dashboard" class="admin-section active">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="fw-bold"><i class="fa-solid fa-tachometer-alt text-primary me-2"></i>Dashboard
+                            </h2>
+                            <div class="admin-date text-muted">
+                                <i class="fa-solid fa-calendar me-1"></i>
+                                <span id="currentDate"></span>
+                            </div>
+                        </div>
+
+                        <!-- Stats Cards -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="stat-card bg-primary text-white rounded-3 p-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h3 class="fw-bold mb-1">৳ 4,450</h3>
+                                            <p class="mb-0">Total Revenue</p>
+                                        </div>
+                                        <i class="fa-solid fa-dollar-sign fa-2x opacity-75"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="stat-card bg-success text-white rounded-3 p-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h3 class="fw-bold mb-1">48</h3>
+                                            <p class="mb-0">New Orders</p>
+                                        </div>
+                                        <i class="fa-solid fa-shopping-cart fa-2x opacity-75"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="stat-card bg-warning text-white rounded-3 p-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h3 class="fw-bold mb-1">156</h3>
+                                            <p class="mb-0">Total Customers</p>
+                                        </div>
+                                        <i class="fa-solid fa-users fa-2x opacity-75"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="stat-card bg-info text-white rounded-3 p-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h3 class="fw-bold mb-1">89</h3>
+                                            <p class="mb-0">Products</p>
+                                        </div>
+                                        <i class="fa-solid fa-shirt fa-2x opacity-75"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Orders & Analytics -->
+                        <div class="row g-4">
+                            <div class="col-lg-8">
+                                <div class="card shadow-sm">
+                                    <div class="card-header bg-white">
+                                        <h5 class="fw-bold mb-0"><i class="fa-solid fa-clock me-2"></i>Recent Orders
+                                        </h5>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover mb-0">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>Order ID</th>
+                                                        <th>Customer</th>
+                                                        <th>Product</th>
+                                                        <th>Amount</th>
+                                                        <th>Status</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>#ORD-001</td>
+                                                        <td>Ahmed Khan</td>
+                                                        <td>Football Jersey</td>
+                                                        <td>৳ 4,500</td>
+                                                        <td><span class="badge bg-success">Completed</span></td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#ORD-002</td>
+                                                        <td>Sarah Ahmed</td>
+                                                        <td>Cricket Jersey</td>
+                                                        <td>৳ 4,400</td>
+                                                        <td><span class="badge bg-warning">Processing</span></td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#ORD-003</td>
+                                                        <td>Rahim Ali</td>
+                                                        <td>Basketball Jersey</td>
+                                                        <td>৳ 4,450</td>
+                                                        <td><span class="badge bg-info">Pending</span></td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card shadow-sm">
+                                    <div class="card-header bg-white">
+                                        <h5 class="fw-bold mb-0"><i class="fa-solid fa-chart-pie me-2"></i>Sales
+                                            Overview</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sales-chart">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span>This Month</span>
+                                                <span class="fw-bold text-success">+15%</span>
+                                            </div>
+                                            <div class="progress mb-3" style="height: 8px;">
+                                                <div class="progress-bar bg-success" style="width: 75%"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span>Last Month</span>
+                                                <span class="fw-bold text-muted">+8%</span>
+                                            </div>
+                                            <div class="progress mb-3" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" style="width: 60%"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span>Target</span>
+                                                <span class="fw-bold text-info">৳ 450K</span>
+                                            </div>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-info" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div id="orders" class="admin-section d-none">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="fw-bold"><i class="fa-solid fa-shopping-cart text-primary me-2"></i>Order
+                                Management</h2>
+                            <button class="btn btn-primary"><i class="fa-solid fa-plus me-2"></i>Add Order</button>
+                        </div>
+
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-white">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <h5 class="fw-bold mb-0">All Orders</h5>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search orders...">
+                                            <button class="btn btn-outline-secondary"><i
+                                                    class="fa-solid fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Date</th>
+                                                <th>Customer</th>
+                                                <th>Products</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#ORD-001</td>
+                                                <td>2025-01-15</td>
+                                                <td>Ahmed Khan</td>
+                                                <td>Football Jersey x10</td>
+                                                <td>৳ 4,550</td>
+                                                <td><span class="badge bg-success">Completed</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary me-1">View</button>
+                                                    <button class="btn btn-sm btn-outline-success me-1">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#ORD-002</td>
+                                                <td>2025-01-14</td>
+                                                <td>Sarah Ahmed</td>
+                                                <td>Cricket Jersey x12</td>
+                                                <td>৳ 4,460</td>
+                                                <td><span class="badge bg-warning">Processing</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary me-1">View</button>
+                                                    <button class="btn btn-sm btn-outline-success me-1">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#ORD-003</td>
+                                                <td>2025-01-13</td>
+                                                <td>Rahim Ali</td>
+                                                <td>Basketball Jersey x8</td>
+                                                <td>৳ 4,620</td>
+                                                <td><span class="badge bg-info">Pending</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary me-1">View</button>
+                                                    <button class="btn btn-sm btn-outline-success me-1">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Section -->
+                    <div id="products" class="admin-section d-none">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="fw-bold"><i class="fa-solid fa-shirt text-primary me-2"></i>Product Management
+                            </h2>
+                            <button class="btn btn-primary"><i class="fa-solid fa-plus me-2"></i>Add Product</button>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card-admin shadow-sm">
+                                    <img src="images/PhotoRoom-20250706_141831.png" class="card-img-top"
+                                        alt="Football Jersey">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Football Jersey Classic</h6>
+                                        <p class="card-text text-muted">৳ 427 per piece</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-success">In Stock</span>
+                                            <div>
+                                                <button class="btn btn-sm btn-outline-primary me-1">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card-admin shadow-sm">
+                                    <img src="images/WhatsApp_Image_2025-07-09_at_00.37.37_396d49b2.jpg"
+                                        class="card-img-top" alt="Football Pro">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Football Pro Edition</h6>
+                                        <p class="card-text text-muted">৳ 445 per piece</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-success">In Stock</span>
+                                            <div>
+                                                <button class="btn btn-sm btn-outline-primary me-1">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card product-card-admin shadow-sm">
+                                    <img src="images/48_Soccer Jersey Mockup - adhink ramadlan.jpeg"
+                                        class="card-img-top" alt="Cricket Jersey">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Cricket Jersey Green</h6>
+                                        <p class="card-text text-muted">৳ 440 per piece</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-warning">Low Stock</span>
+                                            <div>
+                                                <button class="btn btn-sm btn-outline-primary me-1">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customers Section -->
+                    <div id="customers" class="admin-section d-none">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="fw-bold"><i class="fa-solid fa-users text-primary me-2"></i>Customer Management
+                            </h2>
+                            <button class="btn btn-primary"><i class="fa-solid fa-plus me-2"></i>Add Customer</button>
+                        </div>
+
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-white">
+                                <h5 class="fw-bold mb-0">All Customers</h5>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
+                                                <th>Orders</th>
+                                                <th>Total Spent</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#CUST-001</td>
+                                                <td>Ahmed Khan</td>
+                                                <td>ahmed@email.com</td>
+                                                <td>+880 1712345678</td>
+                                                <td>5</td>
+                                                <td>৳ 41,550</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary me-1">View</button>
+                                                    <button class="btn btn-sm btn-outline-success me-1">Edit</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#CUST-002</td>
+                                                <td>Sarah Ahmed</td>
+                                                <td>sarah@email.com</td>
+                                                <td>+880 1812345678</td>
+                                                <td>3</td>
+                                                <td>৳ 42,850</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary me-1">View</button>
+                                                    <button class="btn btn-sm btn-outline-success me-1">Edit</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Section -->
+                    <div id="analytics" class="admin-section d-none">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="fw-bold"><i class="fa-solid fa-chart-line text-primary me-2"></i>Analytics</h2>
+                            <div class="btn-group">
+                                <button class="btn btn-outline-primary">Daily</button>
+                                <button class="btn btn-outline-primary active">Weekly</button>
+                                <button class="btn btn-outline-primary">Monthly</button>
+                            </div>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-lg-8">
+                                <div class="card shadow-sm">
+                                    <div class="card-header bg-white">
+                                        <h5 class="fw-bold mb-0">Sales Chart</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="chart-placeholder bg-light rounded p-4 text-center">
+                                            <i class="fa-solid fa-chart-line fa-3x text-muted mb-3"></i>
+                                            <h6 class="text-muted">Sales Chart will be displayed here</h6>
+                                            <p class="small text-muted">Integration with Chart.js or similar library</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card shadow-sm">
+                                    <div class="card-header bg-white">
+                                        <h5 class="fw-bold mb-0">Top Products</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="top-product mb-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>Football Jersey</span>
+                                                <span class="fw-bold">৳ 41,250</span>
+                                            </div>
+                                            <div class="progress mt-1" style="height: 6px;">
+                                                <div class="progress-bar bg-primary" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="top-product mb-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>Cricket Jersey</span>
+                                                <span class="fw-bold">৳ 45,500</span>
+                                            </div>
+                                            <div class="progress mt-1" style="height: 6px;">
+                                                <div class="progress-bar bg-success" style="width: 70%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="top-product mb-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>Basketball Jersey</span>
+                                                <span class="fw-bold">৳ 42,100</span>
+                                            </div>
+                                            <div class="progress mt-1" style="height: 6px;">
+                                                <div class="progress-bar bg-warning" style="width: 60%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Section -->
+                    <div id="settings" class="admin-section d-none">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="fw-bold"><i class="fa-solid fa-cog text-primary me-2"></i>Settings</h2>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="card shadow-sm">
+                                    <div class="card-header bg-white">
+                                        <h5 class="fw-bold mb-0">General Settings</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label class="form-label">Company Name</label>
+                                                <input type="text" class="form-control" value="TRUJERS">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Email</label>
+                                                <input type="email" class="form-control" value="admin@WEAR11.com">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Phone</label>
+                                                <input type="tel" class="form-control" value="+880 12345678900">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Address</label>
+                                                <textarea class="form-control"
+                                                    rows="3">Dhaka, Bangladesh</textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card shadow-sm">
+                                    <div class="card-header bg-white">
+                                        <h5 class="fw-bold mb-0">Notification Settings</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="emailNotif" checked>
+                                            <label class="form-check-label" for="emailNotif">Email Notifications</label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="smsNotif">
+                                            <label class="form-check-label" for="smsNotif">SMS Notifications</label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="orderNotif" checked>
+                                            <label class="form-check-label" for="orderNotif">New Order Alerts</label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="stockNotif" checked>
+                                            <label class="form-check-label" for="stockNotif">Low Stock Alerts</label>
+                                        </div>
+                                        <button class="btn btn-primary">Save Settings</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-white mt-auto" data-aos="fade-up">
+        <div class="container py-5">
+          <div class="row justify-content-between">
+    
+            <!-- Company Info -->
+            <div class="col-md-3 mb-4">
+              <h5 class="fw-bold"><i class="fa-solid fa-shirt text-warning me-2"></i>Wear11</h5>
+              <p class="small">
+                Premium quality custom jerseys for athletes and fans. Designed with care and precision.
+              </p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-semibold mb-3">Quick Links</h6>
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="about.html" class="footer-link">About</a></li>
+                <li><a href="products.html" class="footer-link">Products</a></li>
+                <li><a href="cart.html" class="footer-link">Cart</a></li>
+                <li><a href="order.html" class="footer-link">Order</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li>
+                <li><a href="login.html" class="footer-link">Login</a></li>
+                <li><a href="user.html" class="footer-link">Register</a></li>
+              </ul>
+            </div>
+    
+            <!-- Newsletter -->
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-semibold mb-3">Subscribe</h6>
+              <form>
+                <div class="input-group">
+                  <input type="email" class="form-control form-control-sm" placeholder="Your email" required>
+                  <button class="btn btn-warning btn-sm" type="submit">Subscribe</button>
+                </div>
+              </form>
+              <small class="d-block mt-2">No spam, we promise.</small>
+            </div>
+    
+            <!-- Our Office -->
+            <div class="col-md-4 mb-4">
+              <h6 class="fw-semibold mb-3">Our Office</h6>
+              <div class="office-placeholder bg-light rounded shadow mb-2 d-flex align-items-center justify-content-center"
+                  style="height: 120px; max-width: 100%; overflow: hidden;">
+                <iframe
+                  src="https://www.google.com/maps?q=,+Dhaka,+Bangladesh&output=embed"
+                  width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <address class="small">
+                <strong>Wear11</strong><br>
+                 Dhaka,Bangladesh<br>
+                <strong>Phone:</strong> +880 1154698722<br>
+                <strong>Email:</strong> wear11@gmail.com
+              </address>
+            </div>
+          </div>
+    
+          <!-- Footer Bottom -->
+          <hr class="bg-white">
+          <div class="text-center small">
+            &copy; 2025 Wear11 | All rights reserved.<br>
+            Designed with <i class="fa-solid fa-heart text-danger"></i> by wear11 Team
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Admin Dashboard JavaScript
+        $(document).ready(function () {
+            // Set current date
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            $('#currentDate').text(today.toLocaleDateString('en-US', options));
+
+            // Navigation functionality
+            $('.admin-nav-link').click(function (e) {
+                e.preventDefault();
+                const section = $(this).data('section');
+
+                // Remove active class from all links and sections
+                $('.admin-nav-link').removeClass('active');
+                $('.admin-section').addClass('d-none').removeClass('active');
+
+                // Add active class to clicked link and show section
+                $(this).addClass('active');
+                $('#' + section).removeClass('d-none').addClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

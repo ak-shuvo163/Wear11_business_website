@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration - JerseyMaker</title>
+    <!-- SEO Meta Tags -->
+    <meta name="title" content="User Registration - JerseyMaker">
+    <meta name="description"
+        content="Register for a JerseyMaker account to order premium custom jerseys. Fast, secure, and easy registration.">
+    <meta name="keywords" content="register, sign up, custom jersey, Bangladesh, trujers">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JerseyMaker Team">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/user.html">
+    <meta property="og:title" content="User Registration - JerseyMaker">
+    <meta property="og:description"
+        content="Register for a JerseyMaker account to order premium custom jerseys. Fast, secure, and easy registration.">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/user.html">
+    <meta property="twitter:title" content="User Registration - JerseyMaker">
+    <meta property="twitter:description"
+        content="Register for a JerseyMaker account to order premium custom jerseys. Fast, secure, and easy registration.">
+    <meta property="twitter:image" content="https://yourdomain.com/images/og-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&family=Poppins:wght@400;700&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/download__24_-removebg-preview.png" alt="Logo" style="height:45px;">
+                <span style="font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:2px;">Wear11</span>
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mainNavOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                    class="fa-solid fa-circle-info"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html"><i class="fa-solid fa-shirt"></i>
+                                Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="order.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i
+                                    class="fa-solid fa-envelope"></i> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html"><i
+                                    class="fa-solid fa-sign-in-alt"></i> Login</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="user.html"><i
+                                    class="fa-solid fa-user-plus"></i> Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Registration Section -->
+    <section class="user-registration py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="registration-container">
+                        <!-- Registration Header -->
+                        <div class="registration-header text-center mb-4">
+                            <div class="registration-icon mb-3">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </div>
+                            <h2 class="registration-title">Create Your Account</h2>
+                            <p class="registration-subtitle">Join our community and start shopping for premium jerseys
+                            </p>
+                        </div>
+
+                        <!-- Registration Form -->
+                        <div class="registration-card">
+                            <form class="registration-form" id="userRegistrationForm">
+                                <!-- Personal Information -->
+                                <div class="form-section mb-4">
+                                    <h5 class="form-section-title mb-3">
+                                        <i class="fa-solid fa-user-circle me-2"></i>Personal Information
+                                    </h5>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">First Name <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Enter your first name"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Last Name <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Enter your last name"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Email Address <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" placeholder="Enter your email"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Phone Number <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="tel" class="form-control" placeholder="01XXXXXXXXX" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Date of Birth</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Gender</label>
+                                            <div class="d-flex gap-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="gender" id="male"
+                                                        value="male">
+                                                    <label class="form-check-label" for="male">Male</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="gender"
+                                                        id="female" value="female">
+                                                    <label class="form-check-label" for="female">Female</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="gender"
+                                                        id="other" value="other">
+                                                    <label class="form-check-label" for="other">Other</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Address Information -->
+                                <div class="form-section mb-4">
+                                    <h5 class="form-section-title mb-3">
+                                        <i class="fa-solid fa-map-marker-alt me-2"></i>Address Information
+                                    </h5>
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label class="form-label">Full Address <span
+                                                    class="text-danger">*</span></label>
+                                            <textarea class="form-control" rows="3"
+                                                placeholder="Enter your complete address" required></textarea>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">City <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Enter your city"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Postal Code</label>
+                                            <input type="text" class="form-control" placeholder="Enter postal code">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Country</label>
+                                            <select class="form-select">
+                                                <option value="">Select Country</option>
+                                                <option value="BD" selected>Bangladesh</option>
+                                                <option value="IN">India</option>
+                                                <option value="PK">Pakistan</option>
+                                                <option value="US">United States</option>
+                                                <option value="UK">United Kingdom</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Account Security -->
+                                <div class="form-section mb-4">
+                                    <h5 class="form-section-title mb-3">
+                                        <i class="fa-solid fa-lock me-2"></i>Account Security
+                                    </h5>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Password <span
+                                                    class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                                                <input type="password" class="form-control"
+                                                    placeholder="Create a strong password" required>
+                                                <button class="btn btn-outline-secondary" type="button"
+                                                    id="togglePassword">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="password-strength mt-2">
+                                                <div class="progress" style="height: 4px;">
+                                                    <div class="progress-bar" id="passwordStrength" style="width: 0%">
+                                                    </div>
+                                                </div>
+                                                <small class="text-muted" id="passwordHint">Password strength
+                                                    indicator</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Confirm Password <span
+                                                    class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                                                <input type="password" class="form-control"
+                                                    placeholder="Confirm your password" required>
+                                                <button class="btn btn-outline-secondary" type="button"
+                                                    id="toggleConfirmPassword">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Preferences -->
+                                <div class="form-section mb-4">
+                                    <h5 class="form-section-title mb-3">
+                                        <i class="fa-solid fa-cog me-2"></i>Preferences
+                                    </h5>
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label class="form-label">Favorite Sports</label>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="football"
+                                                        value="football">
+                                                    <label class="form-check-label" for="football">Football</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="cricket"
+                                                        value="cricket">
+                                                    <label class="form-check-label" for="cricket">Cricket</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="basketball"
+                                                        value="basketball">
+                                                    <label class="form-check-label" for="basketball">Basketball</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="volleyball"
+                                                        value="volleyball">
+                                                    <label class="form-check-label" for="volleyball">Volleyball</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Newsletter Subscription</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                                                <label class="form-check-label" for="newsletter">
+                                                    Subscribe to our newsletter for updates and special offers
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Marketing Communications</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="marketing">
+                                                <label class="form-check-label" for="marketing">
+                                                    Receive promotional emails and SMS notifications
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="form-section mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            I agree to the <a href="#" class="text-decoration-none">Terms &
+                                                Conditions</a> and
+                                            <a href="#" class="text-decoration-none">Privacy Policy</a> <span
+                                                class="text-danger">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="d-grid mb-3">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fa-solid fa-user-plus me-2"></i>Create Account
+                                    </button>
+                                </div>
+
+                                <!-- Login Link -->
+                                <div class="text-center">
+                                    <p class="mb-0">Already have an account? <a href="login.html"
+                                            class="text-decoration-none">Sign in here</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="registration-benefits py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon mb-3">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <h5>Exclusive Offers</h5>
+                        <p class="text-muted">Get access to member-only discounts and special promotions</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon mb-3">
+                            <i class="fa-solid fa-shipping-fast"></i>
+                        </div>
+                        <h5>Fast Delivery</h5>
+                        <p class="text-muted">Enjoy priority shipping and faster order processing</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon mb-3">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h5>Wishlist</h5>
+                        <p class="text-muted">Save your favorite jerseys for later purchase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white mt-auto" data-aos="fade-up">
+        <div class="container py-5">
+          <div class="row justify-content-between">
+    
+            <!-- Company Info -->
+            <div class="col-md-3 mb-4">
+              <h5 class="fw-bold"><i class="fa-solid fa-shirt text-warning me-2"></i>Wear11</h5>
+              <p class="small">
+                Premium quality custom jerseys for athletes and fans. Designed with care and precision.
+              </p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-semibold mb-3">Quick Links</h6>
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="about.html" class="footer-link">About</a></li>
+                <li><a href="products.html" class="footer-link">Products</a></li>
+                <li><a href="cart.html" class="footer-link">Cart</a></li>
+                <li><a href="order.html" class="footer-link">Order</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li>
+                <li><a href="login.html" class="footer-link">Login</a></li>
+                <li><a href="user.html" class="footer-link">Register</a></li>
+              </ul>
+            </div>
+    
+            <!-- Newsletter -->
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-semibold mb-3">Subscribe</h6>
+              <form>
+                <div class="input-group">
+                  <input type="email" class="form-control form-control-sm" placeholder="Your email" required>
+                  <button class="btn btn-warning btn-sm" type="submit">Subscribe</button>
+                </div>
+              </form>
+              <small class="d-block mt-2">No spam, we promise.</small>
+            </div>
+    
+            <!-- Our Office -->
+            <div class="col-md-4 mb-4">
+              <h6 class="fw-semibold mb-3">Our Office</h6>
+              <div class="office-placeholder bg-light rounded shadow mb-2 d-flex align-items-center justify-content-center"
+                  style="height: 120px; max-width: 100%; overflow: hidden;">
+                <iframe
+                  src="https://www.google.com/maps?q=,+Dhaka,+Bangladesh&output=embed"
+                  width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <address class="small">
+                <strong>Wear11</strong><br>
+                 Dhaka,Bangladesh<br>
+                <strong>Phone:</strong> +880 1154698722<br>
+                <strong>Email:</strong> wear11@gmail.com
+              </address>
+            </div>
+          </div>
+    
+          <!-- Footer Bottom -->
+          <hr class="bg-white">
+          <div class="text-center small">
+            &copy; 2025 Wear11 | All rights reserved.<br>
+            Designed with <i class="fa-solid fa-heart text-danger"></i> by wear11 Team
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // User Registration Page JavaScript
+        $(document).ready(function () {
+            // Toggle password visibility
+            $('#togglePassword').click(function () {
+                const passwordField = $(this).siblings('input');
+                const icon = $(this).find('i');
+
+                if (passwordField.attr('type') === 'password') {
+                    passwordField.attr('type', 'text');
+                    icon.removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    passwordField.attr('type', 'password');
+                    icon.removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            });
+
+            // Toggle confirm password visibility
+            $('#toggleConfirmPassword').click(function () {
+                const passwordField = $(this).siblings('input');
+                const icon = $(this).find('i');
+
+                if (passwordField.attr('type') === 'password') {
+                    passwordField.attr('type', 'text');
+                    icon.removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    passwordField.attr('type', 'password');
+                    icon.removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            });
+
+            // Password strength indicator
+            $('input[type="password"]').on('input', function () {
+                const password = $(this).val();
+                const strengthBar = $('#passwordStrength');
+                const strengthHint = $('#passwordHint');
+
+                let strength = 0;
+                let hint = '';
+
+                if (password.length >= 8) strength += 25;
+                if (password.match(/[a-z]/)) strength += 25;
+                if (password.match(/[A-Z]/)) strength += 25;
+                if (password.match(/[0-9]/)) strength += 25;
+
+                if (strength === 0) {
+                    hint = 'Very Weak';
+                    strengthBar.removeClass().addClass('progress-bar bg-danger');
+                } else if (strength <= 25) {
+                    hint = 'Weak';
+                    strengthBar.removeClass().addClass('progress-bar bg-warning');
+                } else if (strength <= 50) {
+                    hint = 'Fair';
+                    strengthBar.removeClass().addClass('progress-bar bg-info');
+                } else if (strength <= 75) {
+                    hint = 'Good';
+                    strengthBar.removeClass().addClass('progress-bar bg-primary');
+                } else {
+                    hint = 'Strong';
+                    strengthBar.removeClass().addClass('progress-bar bg-success');
+                }
+
+                strengthBar.css('width', strength + '%');
+                strengthHint.text(hint);
+            });
+
+            // Form submission
+            $('#userRegistrationForm').submit(function (e) {
+                e.preventDefault();
+
+                // Get form data
+                const formData = new FormData(this);
+                const password = $('input[type="password"]').first().val();
+                const confirmPassword = $('input[type="password"]').last().val();
+
+                // Validation
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+
+                if (password.length < 8) {
+                    alert('Password must be at least 8 characters long!');
+                    return;
+                }
+
+                // Simulate registration process
+                $('.btn-primary').html('<i class="fa-solid fa-spinner fa-spin me-2"></i>Creating Account...');
+
+                setTimeout(function () {
+                    alert('Account created successfully! Welcome to TRUJERS.');
+                    window.location.href = 'login.html';
+                }, 2000);
+            });
+
+            // Real-time password confirmation check
+            $('input[type="password"]').last().on('input', function () {
+                const password = $('input[type="password"]').first().val();
+                const confirmPassword = $(this).val();
+
+                if (confirmPassword && password !== confirmPassword) {
+                    $(this).addClass('is-invalid');
+                } else {
+                    $(this).removeClass('is-invalid');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

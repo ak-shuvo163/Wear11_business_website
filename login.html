@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JerseyMaker</title>
+    <!-- SEO Meta Tags -->
+    <meta name="title" content="Login - JerseyMaker">
+    <meta name="description"
+        content="Login to your JerseyMaker account to order premium custom jerseys. Secure, fast, and easy access.">
+    <meta name="keywords" content="login, sign in, custom jersey, Bangladesh, trujers">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JerseyMaker Team">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/login.html">
+    <meta property="og:title" content="Login - JerseyMaker">
+    <meta property="og:description"
+        content="Login to your JerseyMaker account to order premium custom jerseys. Secure, fast, and easy access.">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/login.html">
+    <meta property="twitter:title" content="Login - JerseyMaker">
+    <meta property="twitter:description"
+        content="Login to your JerseyMaker account to order premium custom jerseys. Secure, fast, and easy access.">
+    <meta property="twitter:image" content="https://yourdomain.com/images/og-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&family=Poppins:wght@400;700&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/download__24_-removebg-preview.png" alt="Logo" style="height:45px;">
+                <span style="font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:2px;">Wear11</span>
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mainNavOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                    class="fa-solid fa-circle-info"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html"><i class="fa-solid fa-shirt"></i>
+                                Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="order.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i
+                                    class="fa-solid fa-envelope"></i> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="login.html"><i
+                                    class="fa-solid fa-sign-in-alt"></i> Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="user.html"><i class="fa-solid fa-user-plus"></i>
+                                Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="login-container">
+                        <!-- Login Tabs -->
+                        <div class="login-tabs mb-4">
+                            <ul class="nav nav-pills nav-fill" id="loginTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="customer-tab" data-bs-toggle="pill"
+                                        data-bs-target="#customer-login" type="button" role="tab">
+                                        <i class="fa-solid fa-user me-2"></i>Customer Login
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="admin-tab" data-bs-toggle="pill"
+                                        data-bs-target="#admin-login" type="button" role="tab">
+                                        <i class="fa-solid fa-user-shield me-2"></i>Admin Login
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="loginTabContent">
+                            <!-- Customer Login -->
+                            <div class="tab-pane fade show active" id="customer-login" role="tabpanel">
+                                <div class="login-card">
+                                    <div class="login-header text-center mb-4">
+                                        <div class="login-icon mb-3">
+                                            <i class="fa-solid fa-user-circle"></i>
+                                        </div>
+                                        <h2 class="login-title">Welcome Back!</h2>
+                                        <p class="login-subtitle">Sign in to your account to continue shopping</p>
+                                    </div>
+
+                                    <form class="login-form" id="customerLoginForm">
+                                        <div class="mb-3">
+                                            <label class="form-label">Email Address <span
+                                                    class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i
+                                                        class="fa-solid fa-envelope"></i></span>
+                                                <input type="email" class="form-control" placeholder="Enter your email"
+                                                    required>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Password <span
+                                                    class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                                                <input type="password" class="form-control"
+                                                    placeholder="Enter your password" required>
+                                                <button class="btn btn-outline-secondary" type="button"
+                                                    id="togglePassword">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                                        </div>
+
+                                        <div class="d-grid mb-3">
+                                            <button type="submit" class="btn btn-primary btn-lg">
+                                                <i class="fa-solid fa-sign-in-alt me-2"></i>Sign In
+                                            </button>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <a href="#" class="text-decoration-none">Forgot your password?</a>
+                                        </div>
+                                    </form>
+
+                                    <hr class="my-4">
+
+                                    <div class="social-login mb-4">
+                                        <p class="text-center mb-3">Or sign in with</p>
+                                        <div class="row g-2">
+                                            <div class="col-6">
+                                                <button class="btn btn-outline-primary w-100">
+                                                    <i class="fa-brands fa-google me-2"></i>Google
+                                                </button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button class="btn btn-outline-primary w-100">
+                                                    <i class="fa-brands fa-facebook me-2"></i>Facebook
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <p class="mb-0">Don't have an account? <a href="user.html"
+                                                class="text-decoration-none">Sign up here</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Admin Login -->
+                            <div class="tab-pane fade" id="admin-login" role="tabpanel">
+                                <div class="login-card">
+                                    <div class="login-header text-center mb-4">
+                                        <div class="login-icon mb-3">
+                                            <i class="fa-solid fa-user-shield"></i>
+                                        </div>
+                                        <h2 class="login-title">Admin Access</h2>
+                                        <p class="login-subtitle">Sign in to manage your business</p>
+                                    </div>
+
+                                    <form class="login-form" id="adminLoginForm">
+                                        <div class="mb-3">
+                                            <label class="form-label">Admin Username <span
+                                                    class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Enter admin username" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Admin Password <span
+                                                    class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                                                <input type="password" class="form-control"
+                                                    placeholder="Enter admin password" required>
+                                                <button class="btn btn-outline-secondary" type="button"
+                                                    id="toggleAdminPassword">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="rememberAdmin">
+                                            <label class="form-check-label" for="rememberAdmin">Keep me signed
+                                                in</label>
+                                        </div>
+
+                                        <div class="d-grid mb-3">
+                                            <button type="submit" class="btn btn-danger btn-lg">
+                                                <i class="fa-solid fa-user-shield me-2"></i>Admin Login
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                    <hr class="my-4">
+
+                                    <div class="admin-info">
+                                        <div class="alert alert-info">
+                                            <h6><i class="fa-solid fa-info-circle me-2"></i>Admin Access</h6>
+                                            <p class="small mb-0">Use your admin credentials to access the dashboard and
+                                                manage orders, products, and customers.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="login-features py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fa-solid fa-shield-alt"></i>
+                        </div>
+                        <h5>Secure Login</h5>
+                        <p class="text-muted">Your data is protected with industry-standard encryption</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h5>24/7 Access</h5>
+                        <p class="text-muted">Access your account anytime, anywhere</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h5>Support</h5>
+                        <p class="text-muted">Get help whenever you need it</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white mt-auto" data-aos="fade-up">
+        <div class="container py-5">
+          <div class="row justify-content-between">
+    
+            <!-- Company Info -->
+            <div class="col-md-3 mb-4">
+              <h5 class="fw-bold"><i class="fa-solid fa-shirt text-warning me-2"></i>Wear11</h5>
+              <p class="small">
+                Premium quality custom jerseys for athletes and fans. Designed with care and precision.
+              </p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-semibold mb-3">Quick Links</h6>
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="about.html" class="footer-link">About</a></li>
+                <li><a href="products.html" class="footer-link">Products</a></li>
+                <li><a href="cart.html" class="footer-link">Cart</a></li>
+                <li><a href="order.html" class="footer-link">Order</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li>
+                <li><a href="login.html" class="footer-link">Login</a></li>
+                <li><a href="user.html" class="footer-link">Register</a></li>
+              </ul>
+            </div>
+    
+            <!-- Newsletter -->
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-semibold mb-3">Subscribe</h6>
+              <form>
+                <div class="input-group">
+                  <input type="email" class="form-control form-control-sm" placeholder="Your email" required>
+                  <button class="btn btn-warning btn-sm" type="submit">Subscribe</button>
+                </div>
+              </form>
+              <small class="d-block mt-2">No spam, we promise.</small>
+            </div>
+    
+            <!-- Our Office -->
+            <div class="col-md-4 mb-4">
+              <h6 class="fw-semibold mb-3">Our Office</h6>
+              <div class="office-placeholder bg-light rounded shadow mb-2 d-flex align-items-center justify-content-center"
+                  style="height: 120px; max-width: 100%; overflow: hidden;">
+                <iframe
+                  src="https://www.google.com/maps?q=,+Dhaka,+Bangladesh&output=embed"
+                  width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <address class="small">
+                <strong>Wear11</strong><br>
+                 Dhaka,Bangladesh<br>
+                <strong>Phone:</strong> +880 1154698722<br>
+                <strong>Email:</strong> wear11@gmail.com
+              </address>
+            </div>
+          </div>
+    
+          <!-- Footer Bottom -->
+          <hr class="bg-white">
+          <div class="text-center small">
+            &copy; 2025 Wear11 | All rights reserved.<br>
+            Designed with <i class="fa-solid fa-heart text-danger"></i> by wear11 Team
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Login Page JavaScript
+        $(document).ready(function () {
+            // Toggle password visibility
+            $('#togglePassword').click(function () {
+                const passwordField = $(this).siblings('input');
+                const icon = $(this).find('i');
+
+                if (passwordField.attr('type') === 'password') {
+                    passwordField.attr('type', 'text');
+                    icon.removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    passwordField.attr('type', 'password');
+                    icon.removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            });
+
+            // Toggle admin password visibility
+            $('#toggleAdminPassword').click(function () {
+                const passwordField = $(this).siblings('input');
+                const icon = $(this).find('i');
+
+                if (passwordField.attr('type') === 'password') {
+                    passwordField.attr('type', 'text');
+                    icon.removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    passwordField.attr('type', 'password');
+                    icon.removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            });
+
+            // Customer login form submission
+            $('#customerLoginForm').submit(function (e) {
+                e.preventDefault();
+
+                // Simple validation
+                const email = $(this).find('input[type="email"]').val();
+                const password = $(this).find('input[type="password"]').val();
+
+                if (email && password) {
+                    // Simulate login process
+                    $('.btn-primary').html('<i class="fa-solid fa-spinner fa-spin me-2"></i>Signing In...');
+
+                    setTimeout(function () {
+                        alert('Login successful! Welcome back.');
+                        window.location.href = 'index.html';
+                    }, 2000);
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+
+            // Admin login form submission
+            $('#adminLoginForm').submit(function (e) {
+                e.preventDefault();
+
+                // Simple validation
+                const username = $(this).find('input[type="text"]').val();
+                const password = $(this).find('input[type="password"]').val();
+
+                if (username && password) {
+                    // Simulate admin login process
+                    $('.btn-danger').html('<i class="fa-solid fa-spinner fa-spin me-2"></i>Signing In...');
+
+                    setTimeout(function () {
+                        alert('Admin login successful! Redirecting to dashboard.');
+                        window.location.href = 'admin.html';
+                    }, 2000);
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

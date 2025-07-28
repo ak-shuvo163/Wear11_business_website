@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - JerseyMaker</title>
+    <!-- SEO Meta Tags -->
+    <meta name="title" content="Products - JerseyMaker">
+    <meta name="description"
+        content="Explore our premium collection of custom sports jerseys. Order football, cricket, basketball, volleyball, and custom jerseys in Bangladesh.">
+    <meta name="keywords"
+        content="products, custom jersey, football, cricket, basketball, volleyball, Bangladesh, trujers">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JerseyMaker Team">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/products.html">
+    <meta property="og:title" content="Products - JerseyMaker">
+    <meta property="og:description"
+        content="Explore our premium collection of custom sports jerseys. Order football, cricket, basketball, volleyball, and custom jerseys in Bangladesh.">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/products.html">
+    <meta property="twitter:title" content="Products - JerseyMaker">
+    <meta property="twitter:description"
+        content="Explore our premium collection of custom sports jerseys. Order football, cricket, basketball, volleyball, and custom jerseys in Bangladesh.">
+    <meta property="twitter:image" content="https://yourdomain.com/images/og-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&family=Poppins:wght@400;700&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/download__24_-removebg-preview.png" alt="Logo" style="height:45px;">
+                <span style="font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:2px;">Wear11</span>
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mainNavOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                    class="fa-solid fa-circle-info"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="products.html"><i
+                                    class="fa-solid fa-shirt"></i> Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="order.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i
+                                    class="fa-solid fa-envelope"></i> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html"><i
+                                    class="fa-solid fa-sign-in-alt"></i> Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="user.html"><i class="fa-solid fa-user-plus"></i>
+                                Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Products section-->
+    <section class="products-section py-5">
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="products-hero text-center mb-5" data-aos="fade-up">
+                <h1 class="display-4 fw-bold mb-3" style="font-family: 'Orbitron', sans-serif; color: #1e293b;">
+                    <i class="fa-solid fa-shirt text-primary me-3"></i>Premium Jersey Collection
+                </h1>
+                <p class="lead text-muted mb-4" style="font-family: 'Poppins', sans-serif;">
+                    Discover our exclusive collection of high-quality sports jerseys designed for champions
+                </p>
+                <div class="hero-stats d-flex justify-content-center gap-5 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-number fw-bold text-primary">500+</div>
+                        <div class="stat-label small text-muted">Designs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number fw-bold text-success">50K+</div>
+                        <div class="stat-label small text-muted">Happy Customers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number fw-bold text-warning">24/7</div>
+                        <div class="stat-label small text-muted">Support</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-section mb-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="filter-container d-flex justify-content-center flex-wrap gap-2">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fa-solid fa-border-all me-2"></i>All Products
+                    </button>
+                    <button class="filter-btn" data-filter="football">
+                        <i class="fa-solid fa-futbol me-2"></i>Football
+                    </button>
+                    <button class="filter-btn" data-filter="cricket">
+                        <i class="fa-solid fa-cricket-bat-ball me-2"></i>Cricket
+                    </button>
+                    <button class="filter-btn" data-filter="basketball">
+                        <i class="fa-solid fa-basketball me-2"></i>Basketball
+                    </button>
+                    <button class="filter-btn" data-filter="volleyball">
+                        <i class="fa-solid fa-volleyball me-2"></i>Volleyball
+                    </button>
+                    <button class="filter-btn" data-filter="custom">
+                        <i class="fa-solid fa-pen-nib me-2"></i>Custom
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="products-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Product Card 1 - Football -->
+                    <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="football">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/22_download (12).jpeg" class="img-fluid"
+                                    alt="Football Jersey Classic">
+                                <div class="product-overlay">
+                                    <div class="overlay-buttons">
+                                        <button class="btn btn-light btn-sm me-2"
+                                            onclick="openOrderModal('Football Jersey Classic', 550)">
+                                            <i class="fa-solid fa-cart-plus"></i> Order
+                                        </button>
+                                        <button class="btn btn-outline-light btn-sm"
+                                            onclick="openQuickView('Football Jersey Classic', 'images/PhotoRoom-20250706_141831.png', 'Premium football jersey with modern design and comfortable fit.')">
+                                            <i class="fa-solid fa-eye"></i> View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-badge">Best Seller</div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Football Jersey</h5>
+                                <div class="product-price">
+                                    <span class="current-price">৳ 550</span>
+                                    <span class="price-unit">per piece</span>
+                                </div>
+                                <div class="product-meta">
+                                    <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                                    <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 - Football -->
+                    <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="football">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/24_download (14).jpeg" class="img-fluid"
+                                    alt="Football Pro Edition">
+                                <div class="product-overlay">
+                                    <div class="overlay-buttons">
+                                        <button class="btn btn-light btn-sm me-2"
+                                            onclick="openOrderModal('Football Pro Edition', 600)">
+                                            <i class="fa-solid fa-cart-plus"></i> Order
+                                        </button>
+                                        <button class="btn btn-outline-light btn-sm"
+                                            onclick="openQuickView('Football Pro Edition', 'images/WhatsApp_Image_2025-07-09_at_00.37.37_396d49b2.jpg', 'Professional football jersey with advanced technology and superior comfort.')">
+                                            <i class="fa-solid fa-eye"></i> View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-badge new">New</div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Football Pro Edition</h5>
+                                <div class="product-price">
+                                    <span class="current-price">৳ 600</span>
+                                    <span class="price-unit">per piece</span>
+                                </div>
+                                <div class="product-meta">
+                                    <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                                    <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 - Cricket -->
+                    <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="cricket">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/48_Soccer Jersey Mockup - adhink ramadlan.jpeg" class="img-fluid"
+                                    alt="Cricket Jersey Green">
+                                <div class="product-overlay">
+                                    <div class="overlay-buttons">
+                                        <button class="btn btn-light btn-sm me-2"
+                                            onclick="openOrderModal('Cricket Jersey Green', 580)">
+                                            <i class="fa-solid fa-cart-plus"></i> Order
+                                        </button>
+                                        <button class="btn btn-outline-light btn-sm"
+                                            onclick="openQuickView('Cricket Jersey Green', 'images/48_Soccer Jersey Mockup - adhink ramadlan.jpeg', 'Classic cricket jersey with breathable fabric and traditional design.')">
+                                            <i class="fa-solid fa-eye"></i> View
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Cricket Jersey</h5>
+                                <div class="product-price">
+                                    <span class="current-price">৳ 580</span>
+                                    <span class="price-unit">per piece</span>
+                                </div>
+                                <div class="product-meta">
+                                    <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                                    <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 - Cricket -->
+                    <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="cricket">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/small_Screenshot 2025-07-07 224611.png"
+                                    class="img-fluid" alt="Cricket Jersey Premium">
+                                <div class="product-overlay">
+                                    <div class="overlay-buttons">
+                                        <button class="btn btn-light btn-sm me-2"
+                                            onclick="openOrderModal('Cricket Jersey Premium', 620)">
+                                            <i class="fa-solid fa-cart-plus"></i> Order
+                                        </button>
+                                        <button class="btn btn-outline-light btn-sm"
+                                            onclick="openQuickView('Cricket Jersey Premium', 'images/40_Jersey futsal printing jersey bola baju bola jersey volly printing gartis nama nomor punggung.jpeg', 'Premium cricket jersey with advanced moisture management and superior comfort.')">
+                                            <i class="fa-solid fa-eye"></i> View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-badge premium">Premium</div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Cricket Jersey Premium</h5>
+                                <div class="product-price">
+                                    <span class="current-price">৳ 620</span>
+                                    <span class="price-unit">per piece</span>
+                                </div>
+                                <div class="product-meta">
+                                    <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                                    <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 - Basketball -->
+                    <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="basketball">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/61_sublimation jersey design order now  01872533898.jpeg" class="img-fluid"
+                                    alt="Basketball Jersey Red">
+                                <div class="product-overlay">
+                                    <div class="overlay-buttons">
+                                        <button class="btn btn-light btn-sm me-2"
+                                            onclick="openOrderModal('Basketball Jersey Red', 560)">
+                                            <i class="fa-solid fa-cart-plus"></i> Order
+                                        </button>
+                                        <button class="btn btn-outline-light btn-sm"
+                                            onclick="openQuickView('Basketball Jersey Red', 'images/PhotoRoom-20250706_142042.png', 'Dynamic basketball jersey with lightweight fabric and excellent mobility.')">
+                                            <i class="fa-solid fa-eye"></i> View
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Basketball Jersey</h5>
+                                <div class="product-price">
+                                    <span class="current-price">৳ 560</span>
+                                    <span class="price-unit">per piece</span>
+                                </div>
+                                <div class="product-meta">
+                                    <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                                    <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 - Volleyball -->
+                    <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="volleyball">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/54_SPR Runner Jersey Running Series A.jpeg" class="img-fluid"
+                                    alt="Volleyball Jersey Blue">
+                                <div class="product-overlay">
+                                    <div class="overlay-buttons">
+                                        <button class="btn btn-light btn-sm me-2"
+                                            onclick="openOrderModal('Volleyball Jersey Blue', 550)">
+                                            <i class="fa-solid fa-cart-plus"></i> Order
+                                        </button>
+                                        <button class="btn btn-outline-light btn-sm"
+                                            onclick="openQuickView('Volleyball Jersey Blue', 'images/PhotoRoom-20250706_135659.png', 'Comfortable volleyball jersey with breathable mesh and flexible design.')">
+                                            <i class="fa-solid fa-eye"></i> View
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Volleyball Jersey</h5>
+                                <div class="product-price">
+                                    <span class="current-price">৳ 550</span>
+                                    <span class="price-unit">per piece</span>
+                                </div>
+                                <div class="product-meta">
+                                    <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                                    <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 7 - Custom -->
+                    <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="custom">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/curtom_jersey.jpg" class="img-fluid" alt="Custom Jersey Black">
+                                <div class="product-overlay">
+                                    <div class="overlay-buttons">
+                                        <button class="btn btn-light btn-sm me-2"
+                                            onclick="openOrderModal('Custom Jersey Black', 700)">
+                                            <i class="fa-solid fa-cart-plus"></i> Order
+                                        </button>
+                                        <button class="btn btn-outline-light btn-sm"
+                                            onclick="openQuickView('Custom Jersey Black', 'images/curtom_jersey.jpg', 'Fully customizable jersey with your own design, colors, and branding.')">
+                                            <i class="fa-solid fa-eye"></i> View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-badge custom">Custom</div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Custom Jersey</h5>
+                                <div class="product-price">
+                                    <span class="current-price">৳ 700</span>
+                                    <span class="price-unit">per piece</span>
+                                </div>
+                                <div class="product-meta">
+                                    <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                                    <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>5-7 days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 8 - Football -->
+                    <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="football">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/48_Soccer Jersey Mockup - adhink ramadlan.jpeg" class="img-fluid"
+                                    alt="Football Jersey Elite">
+                                <div class="product-overlay">
+                                    <div class="overlay-buttons">
+                                        <button class="btn btn-light btn-sm me-2"
+                                            onclick="openOrderModal('Football Jersey Elite', 650)">
+                                            <i class="fa-solid fa-cart-plus"></i> Order
+                                        </button>
+                                        <button class="btn btn-outline-light btn-sm"
+                                            onclick="openQuickView('Football Jersey Elite', 'images/PhotoRoom-20250706_141533.png', 'Elite football jersey with premium fabric and professional design.')">
+                                            <i class="fa-solid fa-eye"></i> View
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-badge hot">Hot</div>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Football Jersey</h5>
+                                <div class="product-price">
+                                    <span class="current-price">৳ 650</span>
+                                    <span class="price-unit">per piece</span>
+                                </div>
+                                <div class="product-meta">
+                                    <span class="min-order"><i class="fa-solid fa-users me-1"></i>Min: 10 pcs</span>
+                                    <span class="delivery-time"><i class="fa-solid fa-clock me-1"></i>3-5 days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- row end -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5" data-aos="fade-up">
+                <button class="btn btn-outline-primary btn-lg px-5 load-more-btn">
+                    <i class="fa-solid fa-plus me-2"></i>Load More Products
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="orderForm">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="orderModalLabel">
+                            <i class="fa-solid fa-cart-shopping me-2"></i>Place Your Order
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Item Name</label>
+                            <input type="text" class="form-control" id="orderItemName" name="item" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Customer Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="orderCustomerName" name="name"
+                                placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="orderPhone" name="phone"
+                                placeholder="01XXXXXXXXX" required pattern="01[0-9]{9}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control" id="orderAddress" name="address"
+                                placeholder="Your Address (optional)">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Quantity</label>
+                            <div class="input-group">
+                                <button type="button" class="btn btn-outline-secondary" id="qtyMinus">-</button>
+                                <input type="number" class="form-control text-center" id="orderQty" name="qty"
+                                    value="10" min="10" readonly style="max-width:80px;">
+                                <button type="button" class="btn btn-outline-secondary" id="qtyPlus">+</button>
+                            </div>
+                            <div class="form-text text-danger d-none" id="qtyError">Minimum 10 pcs order required.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Total Price</label>
+                            <div class="fs-4 fw-bold text-warning" id="orderTotal">৳0</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Payment Method <span class="text-danger">*</span></label>
+                            <select class="form-select" id="paymentMethod" required>
+                                <option value="">Select Payment Method</option>
+                                <option value="bkash">Bkash</option>
+                                <option value="nagad">Nagad</option>
+                                <option value="cod">Cash on Delivery</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-none" id="paymentInstructions">
+                            <div class="alert alert-info p-2 mb-2" id="paymentNumber"></div>
+                            <label class="form-label">Transaction ID <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="trxId" placeholder="Enter Transaction ID">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-warning">Confirm Order</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+                <div class="p-4 text-center d-none" id="orderSuccess">
+                    <i class="fa-solid fa-circle-check fa-3x text-success mb-3"></i>
+                    <h5 class="mb-2">Order Placed Successfully!</h5>
+                    <p>Thank you for your order. We will contact you soon.</p>
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-white mt-auto" data-aos="fade-up">
+        <div class="container py-5">
+          <div class="row justify-content-between">
+    
+            <!-- Company Info -->
+            <div class="col-md-3 mb-4">
+              <h5 class="fw-bold"><i class="fa-solid fa-shirt text-warning me-2"></i>Wear11</h5>
+              <p class="small">
+                Premium quality custom jerseys for athletes and fans. Designed with care and precision.
+              </p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-semibold mb-3">Quick Links</h6>
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="about.html" class="footer-link">About</a></li>
+                <li><a href="products.html" class="footer-link">Products</a></li>
+                <li><a href="cart.html" class="footer-link">Cart</a></li>
+                <li><a href="order.html" class="footer-link">Order</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li>
+                <li><a href="login.html" class="footer-link">Login</a></li>
+                <li><a href="user.html" class="footer-link">Register</a></li>
+              </ul>
+            </div>
+    
+            <!-- Newsletter -->
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-semibold mb-3">Subscribe</h6>
+              <form>
+                <div class="input-group">
+                  <input type="email" class="form-control form-control-sm" placeholder="Your email" required>
+                  <button class="btn btn-warning btn-sm" type="submit">Subscribe</button>
+                </div>
+              </form>
+              <small class="d-block mt-2">No spam, we promise.</small>
+            </div>
+    
+            <!-- Our Office -->
+            <div class="col-md-4 mb-4">
+              <h6 class="fw-semibold mb-3">Our Office</h6>
+              <div class="office-placeholder bg-light rounded shadow mb-2 d-flex align-items-center justify-content-center"
+                  style="height: 120px; max-width: 100%; overflow: hidden;">
+                <iframe
+                  src="https://www.google.com/maps?q=,+Dhaka,+Bangladesh&output=embed"
+                  width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <address class="small">
+                <strong>Wear11</strong><br>
+                 Dhaka,Bangladesh<br>
+                <strong>Phone:</strong> +880 1154698722<br>
+                <strong>Email:</strong> wear11@gmail.com
+              </address>
+            </div>
+          </div>
+    
+          <!-- Footer Bottom -->
+          <hr class="bg-white">
+          <div class="text-center small">
+            &copy; 2025 Wear11 | All rights reserved.<br>
+            Designed with <i class="fa-solid fa-heart text-danger"></i> by wear11 Team
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>

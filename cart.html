@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - JerseyMaker</title>
+    <!-- SEO Meta Tags -->
+    <meta name="title" content="Cart - JerseyMaker">
+    <meta name="description"
+        content="View and manage your shopping cart. Order premium custom jerseys from JerseyMaker in Bangladesh.">
+    <meta name="keywords" content="cart, shopping cart, custom jersey, Bangladesh, trujers">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JerseyMaker Team">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/cart.html">
+    <meta property="og:title" content="Cart - JerseyMaker">
+    <meta property="og:description"
+        content="View and manage your shopping cart. Order premium custom jerseys from JerseyMaker in Bangladesh.">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/cart.html">
+    <meta property="twitter:title" content="Cart - JerseyMaker">
+    <meta property="twitter:description"
+        content="View and manage your shopping cart. Order premium custom jerseys from JerseyMaker in Bangladesh.">
+    <meta property="twitter:image" content="https://yourdomain.com/images/og-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&family=Poppins:wght@400;700&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/download__24_-removebg-preview.png" alt="Logo" style="height:45px;">
+                <span style="font-family:'Orbitron',sans-serif;font-weight:700;letter-spacing:2px;">Wear11</span>
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavOffcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mainNavOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i
+                                    class="fa-solid fa-circle-info"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html"><i class="fa-solid fa-shirt"></i>
+                                Products</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="cart.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="order.html"><i
+                                    class="fa-solid fa-cart-shopping"></i> Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i
+                                    class="fa-solid fa-envelope"></i> Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html"><i
+                                    class="fa-solid fa-sign-in-alt"></i> Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="user.html"><i class="fa-solid fa-user-plus"></i>
+                                Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Hero Section -->
+    <section class="cart-hero py-4">
+        <div class="container">
+            <div class="cart-hero-content text-center">
+                <div class="cart-hero-icon mb-3">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                </div>
+                <h1 class="cart-hero-title mb-2">Your Shopping Cart</h1>
+                <p class="cart-hero-subtitle">Review your items and proceed to checkout</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Cart Items Column -->
+                <div class="col-lg-8 mb-4">
+                    <div class="cart-items-container">
+                        <div class="cart-items-header">
+                            <h3 class="cart-items-title">
+                                <i class="fa-solid fa-list me-2"></i>Cart Items
+                            </h3>
+                            <span class="cart-items-count" id="cartItemsCount">0 items</span>
+                        </div>
+
+                        <!-- Cart Items List -->
+                        <div class="cart-items-list" id="cartContent">
+                            <!-- JS will render cart items here -->
+                        </div>
+
+                        <!-- Empty Cart State -->
+                        <div id="emptyCart" class="empty-cart-state d-none">
+                            <div class="empty-cart-icon">
+                                <i class="fa-solid fa-shopping-cart"></i>
+                            </div>
+                            <h3 class="empty-cart-title">Your cart is empty!</h3>
+                            <p class="empty-cart-description">Looks like you haven't added anything to your cart yet.
+                            </p>
+                            <a href="products.html" class="btn btn-primary btn-lg empty-cart-cta">
+                                <i class="fa-solid fa-shirt me-2"></i>Start Shopping
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Column -->
+                <div class="col-lg-4">
+                    <div class="order-summary-container">
+                        <div class="order-summary-header">
+                            <h3 class="order-summary-title">
+                                <i class="fa-solid fa-receipt me-2"></i>Order Summary
+                            </h3>
+                        </div>
+
+                        <div class="order-summary-content">
+                            <!-- Cart Summary -->
+                            <div class="cart-summary" id="cartSummary">
+                                <!-- JS will render summary here -->
+                            </div>
+
+                            <!-- Checkout Button -->
+                            <div class="checkout-section">
+                                <button class="btn btn-success btn-lg w-100 checkout-btn" id="checkoutBtn" disabled>
+                                    <i class="fa-solid fa-credit-card me-2"></i>Proceed to Checkout
+                                </button>
+                                <p class="checkout-note">
+                                    <i class="fa-solid fa-shield-alt me-1"></i>Secure checkout with SSL encryption
+                                </p>
+                            </div>
+
+                            <!-- Continue Shopping -->
+                            <div class="continue-shopping">
+                                <a href="products.html" class="btn btn-outline-primary w-100">
+                                    <i class="fa-solid fa-arrow-left me-2"></i>Continue Shopping
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white mt-auto" data-aos="fade-up">
+        <div class="container py-5">
+          <div class="row justify-content-between">
+    
+            <!-- Company Info -->
+            <div class="col-md-3 mb-4">
+              <h5 class="fw-bold"><i class="fa-solid fa-shirt text-warning me-2"></i>Wear11</h5>
+              <p class="small">
+                Premium quality custom jerseys for athletes and fans. Designed with care and precision.
+              </p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="col-md-2 mb-4">
+              <h6 class="fw-semibold mb-3">Quick Links</h6>
+              <ul class="list-unstyled d-flex flex-column gap-2">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="about.html" class="footer-link">About</a></li>
+                <li><a href="products.html" class="footer-link">Products</a></li>
+                <li><a href="cart.html" class="footer-link">Cart</a></li>
+                <li><a href="order.html" class="footer-link">Order</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li>
+                <li><a href="login.html" class="footer-link">Login</a></li>
+                <li><a href="user.html" class="footer-link">Register</a></li>
+              </ul>
+            </div>
+    
+            <!-- Newsletter -->
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-semibold mb-3">Subscribe</h6>
+              <form>
+                <div class="input-group">
+                  <input type="email" class="form-control form-control-sm" placeholder="Your email" required>
+                  <button class="btn btn-warning btn-sm" type="submit">Subscribe</button>
+                </div>
+              </form>
+              <small class="d-block mt-2">No spam, we promise.</small>
+            </div>
+    
+            <!-- Our Office -->
+            <div class="col-md-4 mb-4">
+              <h6 class="fw-semibold mb-3">Our Office</h6>
+              <div class="office-placeholder bg-light rounded shadow mb-2 d-flex align-items-center justify-content-center"
+                  style="height: 120px; max-width: 100%; overflow: hidden;">
+                <iframe
+                  src="https://www.google.com/maps?q=,+Dhaka,+Bangladesh&output=embed"
+                  width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <address class="small">
+                <strong>Wear11</strong><br>
+                 Dhaka,Bangladesh<br>
+                <strong>Phone:</strong> +880 1154698722<br>
+                <strong>Email:</strong> wear11@gmail.com
+              </address>
+            </div>
+          </div>
+    
+          <!-- Footer Bottom -->
+          <hr class="bg-white">
+          <div class="text-center small">
+            &copy; 2025 Wear11 | All rights reserved.<br>
+            Designed with <i class="fa-solid fa-heart text-danger"></i> by wear11 Team
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        if (typeof AOS !== 'undefined') { AOS.init({ duration: 1000, once: true, offset: 100 }); }
+    </script>
+</body>
+
+</html>
