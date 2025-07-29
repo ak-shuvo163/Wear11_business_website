@@ -501,7 +501,7 @@ if (typeof AOS !== "undefined") {
         {
           name: "Basketball Jersey Pro",
           price: 620,
-          image: "images/44_konsep Jersey depan.jpeg",
+          image: "images/55_sublimation_jersey_degsin__1_.jpeg",
         },
         {
           name: "Basketball Jersey Elite",
